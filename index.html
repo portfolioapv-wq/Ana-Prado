@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geom:ital,wght@0,300..900;1,300..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
+	<title>Portfolio Ana Prado</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="jquery/galerias/lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<style type="text/css">
+		* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+			transition: all 0.4s ease-in-out;
+            font-family: "Quicksand", sans-serif;
+            transition: all 0.5s;
+        }
+
+        body{
+            background-color: #886247;
+            min-width: 623px;
+        }
+
+/* FONTS */
+        h1{
+           font-family: "Geom", sans-serif;
+           font-size: 100px;
+        }
+
+        h2{
+            font-family: "Geom", sans-serif;
+            font-size: 55px;
+            color: #886247;
+        }
+
+        button{
+            font-size: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+         ul {
+            list-style: none;
+        }
+
+        header p{
+            font-size: 30px;
+        }
+
+        .contenedor3 h2{
+            color: white;
+            text-align: center;
+        }
+
+        #contacto h2, #contacto h3, #contacto p, #contacto i{
+            color: white;
+        }
+
+        div.titulos h2{
+            color: white;
+            text-align: center;
+            margin: 2vh 0;
+            margin-top: 10vh;
+            background-color: #886247;
+        }
+
+        #sobre-mi h3{
+            color: #886247;
+        }
+/*  */
+
+/* BOTONES */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 1seg;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #886247;
+            box-shadow: var(--shadow);
+        }
+/*  */
+
+/* HEADER */
+        .fullscreen-header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* width: 100%; */
+            height: 100%;
+            z-index: -2;
+        }
+
+        .header-bg img{
+            height: 100%;
+        }
+
+        .header_portatil1{
+            display: none;          
+        }
+        
+        .header_tablet{
+            display: none;
+        }
+        
+        .header_movil1{
+            display: none;
+        }
+
+        .header_movil2{
+            display: none;
+        }
+        
+        .fixed-menu {
+            position: fixed;
+            top: -80px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(136, 98, 71, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            transition: top 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .fixed-menu.visible {
+            top: 0;
+        }
+
+        .menu-container {
+            /* max-width: 1200px; */
+            margin: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #4dabf7;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #E38D5D;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #E38D5D;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+/*  */
+
+/* SECCIONES */
+        section{
+            padding: 10vh 20vw;
+        }
+
+/* SECCIÓN 1 */
+        .portfolio {
+            background-color: white;
+            /* padding: 10vh 5vh; */
+        }
+
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            color: #886247;
+            padding: 8px 20px;
+            background-color: white;
+            border: 2px solid #886247;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.5seg;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: #886247;
+            color: white;
+            border-color: #886247;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+/*  */
+
+/* SECCIÓN 3/MODELADO */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background-color: white;
+        }
+        
+        /* .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        } */
+        
+        .gallery-item img, .gallery-item iframes{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* .gallery-item:hover img {
+            transform: scale(1.05);
+        } */
+        
+        .gallery-info {
+            padding: 20px;
+        }
+        
+        .gallery-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .gallery-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .gallery-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .gallery-tag {
+            background-color: #eef5ff;
+            color: #2575fc;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+        
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #2575fc;
+        }
+/*  */
+
+/* ABOUT ME */
+        #sobre-mi{
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            background-color: #886247;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+/*  */
+
+/* SECCIÓN CONTACTO */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form .btn{
+
+        }
+/*  */
+
+/* FOOTER */
+        footer {
+            background-color: #533C2C;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+/*  */
+
+
+/* RESPOSIVE */
+   /*  @media (max-width: 992px) {
+        .header_portatil2{
+            display: none;          
+        }
+
+        .header_portatil1{
+            display: ;          
+        }
+        
+        .header_tablet{
+            display: none;
+        }
+        
+        .header_movil1{
+            display: none;
+        }
+
+        .header_movil2{
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header_portatil1{
+            display: none;          
+        }
+        
+        .header_tablet{
+            display: block;
+        }
+        
+        .header_movil1{
+            display: none;
+        }
+
+        .header_movil2{
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .header_portatil1{
+            display: none;          
+        }
+        
+        .header_tablet{
+            display: none;
+        }
+        
+        .header_movil1{
+            display: block;
+        }
+
+        .header_movil2{
+            display: none;
+        }
+    } */
+
+/*  */
+
+
+	</style>
+</head>
+<body>
+	<nav class="fixed-menu" id="fixedMenu">
+        <div class="menu-container">
+            <!-- <a href="#" class="logo">ANARTIST<span>Design</span></a> -->
+            <a href="#" class="logo">ANARTIST</a>
+            <!-- <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button> -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">About me</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="fullscreen-header" id="inicio">
+        <div class="header-bg">
+            <img class="header_portatil2" src="imagenes/fondos/Fondo ordenador_a.png">
+            <img class="header_portatil1" src="imagenes/fondos/Fondo">
+            <img class="header_tablet" src="imagenes/fondos/Fondo ordenador_b.png">
+            <img class="header_movil1" src="imagenes/fondos/Fondo tablet.png">
+            <img class="header_movil2" src="imagenes/fondos/Fondo móvil.png">
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Anartist's Portfolio</h1>
+            <p>Bienvenidos, conoce el arte de Ana.</p>
+            <!-- <a href="#nosotros" class="btn">Explorar más</a> -->
+        </div>
+        <!-- <div class="scroll-down" id="scrollDown">
+            <i class="fas fa-chevron-down"></i>
+        </div> -->
+    </header>
+
+    <section id="proyectos" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mis proyectos</h2>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="animación">Animación</button>
+                <button class="filter-btn" data-filter="dibujo">Dibujo</button>
+                <button class="filter-btn" data-filter="motion">Motion Grafics</button>
+                <button class="filter-btn" data-filter="edición">Edición</button>
+            </div>
+            
+            <div class="portfolio-grid">
+               <!-- Proyecto 1 -->
+               <div class="portfolio-item" data-category="modelado">
+                    <a href="#modelado">
+                        <div class="portfolio-img">
+                            <img src="imagenes/modelado/untitle0d.png" alt="Proyecto 1">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Modelado</h3>
+                            <p>Los distintos bocetos y diseños hechos realidad por medio de programas 3D.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="portfolio-item" data-category="animación">
+                    <a href="#animación2D">
+                        <div class="portfolio-img">
+                            <img src="imagenes/animación 2D/PRADO_ANA_AGUA-FX-2D.gif" alt="Proyecto 2">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Animación 2D</h3>
+                            <p>Por medio del dibujo dar movimiento a los que quieras.</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="portfolio-item" data-category="animación">
+                    <a href="#animación3D">
+                        <div class="portfolio-img">
+                            <img src="imagenes/animación 3D/portada animación.png" alt="Proyecto 3">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Animación 3D</h3>
+                            <p>Los modelos en 3D ponerle huesos y darle movimientos realistas.</p>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Proyecto 4 -->
+                <div class="portfolio-item" data-category="dibujo">
+                    <a href="#dibujos">
+                        <div class="portfolio-img">
+                            <img src="imagenes/dibujos/Ilustración 1.png" alt="Proyecto 4">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Dibujo</h3>
+                            <p>Pequeños bocetos hechos desde cero.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="portfolio-item" data-category="motion">
+                    <a href="#motion">
+                        <div class="portfolio-img">
+                            <img src="imagenes/motion grafics/portada motion.png" alt="Proyecto 5">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Motion Grafics</h3>
+                            <p>Animación de texto para c.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="portfolio-item" data-category="edición">
+                    <a href="#edición">
+                        <div class="portfolio-img">
+                            <img src="imagenes/montaje/portada montaje.png" alt="Proyecto 6">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Edición</h3>
+                            <p>Poder transmitir emociones por medio del montaje audiovisual.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="titulos" id="modelado">
+        <h2>Modelado</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/D2xzXzqE7bw?si=UYr0quBTmEBl3Zql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iaeRkpR3wCQ?si=hnMKjS8atRZFYSMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315"  src="https://www.youtube.com/embed/fEJNm6nJ8EI?si=GZ0J6M9gVuwR5M6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_JrJQ3p1UC8?si=4D7DptyNM4RCiULU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png">
+                    </a>
+            </div>
+
+            <!-- Elemento 6 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png">
+                    </a>
+            </div>
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png">
+                    </a>
+            </div>
+
+            <!-- Elemento 8 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mcRSyYLWhVE?si=gYfGpX4L94u4r764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 9 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xC3a-TbZSIU?si=QZOdwobXlvpUwtHP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <a href="imagenes/modelado/hoja de giro arcane.001.jpg" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/modelado/hoja de giro arcane.001.jpg">
+                </a>
+            </div>
+
+            <!-- Elemento 10 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png">
+                </a>
+            </div>
+
+            <!-- Elemento 11 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png">
+                </a>
+            </div>
+
+            <!-- Elemento 12 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/modelado/habitacionluz.jpeg" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/modelado/habitacionluz.jpeg">
+                </a>
+            </div>
+
+            <!-- Elemento 12 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JKPj04dO5fg?si=hoD4Q8_v28fbME-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+    <div class="titulos" id="animación2D">
+        <h2>Animación 2D</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/r-tCE-llrUk?si=K4Z8nIoWNKSHt-tt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bLspniiBLOU?si=d6ORTpkuEM2jJJQd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_o3YN5sqmL0?si=nssolccLcpx7rymu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/H6LsWtX-Ds8?si=Od5-8f_Uxb77STzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wFLg7jDsYX8?si=NuRt702wcR4WMtEK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 6 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LDQ17f3qrQw?si=kgyjUhbDEEx1Dn2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LXo5RS-3l1c?si=vjB4CDm7iSJ-JMHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 8 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PVrJfpVnCjs?si=ikeca411WVhUGDRh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 9 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AC3xdslMUag?si=pChKQURbTBYH4hi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+             <!-- Elemento 10 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8m_hRuqUxME?si=V7-hdHjAgU4t6YkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+    <div class="titulos" id="animación3D">
+        <h2>Animación 3D</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/FcfLKbJX0Fg?si=FP9qeVUrTV7zBx8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/focp4_2BwX8?si=tmecUp7AFFb49IVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OXURBiyBBbU?si=SJL8KNi3QqyoGi3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bhVjVMhW8f0?si=MPDgsA2iWKy1KUja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bXqSqsq1CV0?si=Bp7v6ag8n8Us-gDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 6 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o2EkdExzFFE?si=9CB864j-hiPbRhMa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PHcyDO5DgI0?si=10tEIyFyqGagNODc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         </div>
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Gz4QIgSBrd4?si=xKEWQ3KEJjoNEPJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+            
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+    <div class="titulos" id="dibujos">
+        <h2>Dibujo</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/2ylPnyAMVUo?si=cEwRQaGYnH3LyD-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png">
+                </a>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/4-expresiones-1536x1086.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/4-expresiones-1536x1086.png">
+                </a>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/5 poses.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/5 poses.png">
+                </a>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/3 color.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/3 color.png">
+                </a>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/DIBUJOS 3.001.jpeg" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/DIBUJOS 3.001.jpeg">
+                </a>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/NIÑA ZOMBIE.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/NIÑA ZOMBIE.png">
+                </a>
+            </div>
+
+            <!-- Elemento 6 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg">
+                </a>
+            </div>
+
+            
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/Ilustración_sin_título.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/Ilustración_sin_título.png">
+                </a>
+            </div>
+
+
+            <!-- Elemento 7 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_Çisométrico.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_Çisométrico.png">
+                </a>
+            </div>
+
+             <!-- Elemento 8 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_cónica frontal.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_cónica frontal.png">
+                </a>
+            </div>
+
+             <!-- Elemento 9 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_cónica oblicua.png" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/HABITACIÓN/PRADO_ANA_HABITACIÓN_cónica oblicua.png">
+                </a>
+            </div>
+
+            <!-- Elemento 10 -->
+            <div class="gallery-item" data-category="web">
+                <a href="imagenes/dibujos/BOCETOS.001.jpeg" data-lightbox="galeria" data-title="">
+                    <img src="imagenes/dibujos/BOCETOS.001.jpeg">
+                </a>
+            </div>
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+    <div class="titulos" id="motion">
+        <h2>Motion Grafics</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/hVvi7hnJGG4?si=i9DZAfW02N5x581u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QDOL0UOwylQ?si=9RqlMpFSGoSKGKIO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oExUOkdy6OI?si=TJMJ8XQiGO52Xs-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/z2bOyLwCtiY?si=Bc-zdnXa62jbRmT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+    <div class="titulos" id="edición">
+        <h2>Edición</h2>
+    </div>
+    <section class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-category="web">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/CgRkEAxIceA?si=LuWpp-MelIg3NdU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1Ghpubd1_BI?si=ca39Svjqj-s69ify" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vT1n0WYtKC8?si=8tZ5RsEeNYASVwZu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C4a0NQpBxD4?si=ApH12I-XRzNOSehY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C4a0NQpBxD4?si=ApH12I-XRzNOSehY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Elemento 5 -->
+            <div class="gallery-item" data-category="web">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LqT2oHHnrAs?si=fmE5k6Tjv3j0JtgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal" id="imageModal">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImage" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+    </section>
+
+
+     <section id="sobre-mi">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mí</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="imagenes/foto perfil/WhatsApp Image 2025-12-18 at 03.00.47.jpeg">
+                </div>
+                
+                <div class="about-text">
+                    <h3>¿Quién soy?</h3>
+                    <p>Soy <b>Ana Prado</b> de Sevilla, España. Soy artista 3D y 2D, especializada en todos los ámbitos: diseño de personajes, modelado 3D, texturizado, rigging, animación, iluminación, storyboaring, entre muchas otras cosas.</p>
+                    <p>Desde pequeña siempre quise ser profesora pero según fuí creciendo se despertó en mi un nuevo interés, cómo se hacen las películas de animación. Fui documentándome y viendo todo el proceso que tenía desde los orígenes de la animación tradicional hasta la animación en 3D. Siempre me gustó dibujar, lo cual ayudó a que ese sueño de poder crear vida de la nada fuera creciendo y creciendo, tanto que ya no es un sueño sin cumplir sino uno que estoy cumpliendo gracias a Dios.</p>
+                    
+                    <h3>Estudios</h3>
+                    <p>Actualmente estoy estudiando el último año del Grado Superior de Animación 3D y 2D , juegos y entornos interactivos. Anteriormente estudié un Grado Medio de "Video Disck-Jockey"</p>
+
+                    <h3>Sofware Skills</h3>
+                    
+                    <div class="skills">
+                        <span class="skill">Blender</span>
+                        <span class="skill">After Effects</span>
+                        <span class="skill">Premier Pro</span>
+                        <span class="skill">Photoshop</span>
+                        <span class="skill">Filmora</span>
+                        <span class="skill">XD</span>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS3</span>
+                        <span class="skill">Garage Band</span>
+                        <span class="skill">Prootols</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Sevilla, España</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>anartistcontacto@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+[34] 679 302 751</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain"class="contact-form">
+                    <form id="form-contacto">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" placeholder="Asunto" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Anartist's Portfolio</a>
+            <p>Soli Deo gloria</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Ana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const fixedMenu = document.getElementById('fixedMenu');
+            const scrollPosition = window.scrollY;
+            
+            // Mostrar/ocultar menú fijo según scroll
+            if (scrollPosition > 300) {
+                fixedMenu.classList.add('visible');
+            } else {
+                fixedMenu.classList.remove('visible');
+            }
+        });
+
+        // Filtro del portfolio
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar clase active al botón clickeado
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+         document.getElementById('scrollDown').addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight - 80,
+                behavior: 'smooth'
+            });
+        });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Mostrar/ocultar elementos de la galería según el filtro
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal para vista ampliada de imágenes
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+            
+            galleryItems.forEach(item => {
+                const img = item.querySelector('img');
+                img.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    modalImage.src = this.src;
+                });
+            });
+            
+            // Cerrar modal al hacer clic en la X
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Cerrar modal al hacer clic fuera de la imagen
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Cerrar modal con tecla Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        const contactForm = document.getElementById('form-contacto');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te responderé pronto.');
+            contactForm.reset();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-1.7.2.js" integrity="sha256-FxfqH96M63WENBok78hchTCDxmChGFlo+/lFIPcZPeI=" crossorigin="anonymous"></script>
+    <script src="jquery/galerias/lightbox2-2.11.3/src/js/lightbox.js"></script>
+</body>
+</html>
