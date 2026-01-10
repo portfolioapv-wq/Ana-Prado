@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,9 +71,7 @@
         div.titulos h2{
             color: white;
             text-align: center;
-            margin: 2vh 0;
-            margin-top: 10vh;
-            background-color: #886247;
+            margin: 5vh 0;
         }
 
         #sobre-mi h3{
@@ -235,6 +233,11 @@
             padding: 10vh 20vw;
         }
 
+        .espaciado{
+            height: 2vh;
+            background-color: #886247;
+        }
+
 /* SECCIÓN 1 */
         .portfolio {
             background-color: white;
@@ -271,7 +274,6 @@
             position: relative;
         }
 
-
         .filter-btn.active, .filter-btn:hover {
             background-color: #886247;
             color: white;
@@ -288,8 +290,8 @@
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 1seg;
         }
 
         .portfolio-item:hover {
@@ -305,7 +307,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: all 1seg;
         }
 
         .portfolio-item:hover .portfolio-img img {
@@ -318,11 +320,68 @@
 
         .portfolio-info h3 {
             margin-bottom: 10px;
-            color: var(--primary-color);
         }
 /*  */
 
 /* SECCIÓN 3 */
+        #modelado{
+            background-image: url('imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 0.9); 
+            background-blend-mode: multiply;
+        }
+
+        #animación2D{
+            background-image: url('imagenes/animación 2D/layout/LAYOUT PERSONAJE POSE 2.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 0.9); 
+            background-blend-mode: multiply;
+        }
+
+        #animación3D{
+            background-image: url('imagenes/animación 3D/portada animación.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 0.9); 
+            background-blend-mode: multiply;
+        }
+
+        #dibujos{
+            background-image: url('imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 1); 
+            background-blend-mode: multiply;
+        }
+
+        #motion{
+            background-image: url('imagenes/motion grafics/portada motion.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 1); 
+            background-blend-mode: multiply;
+        }
+
+        #edición{
+            background-image: url('imagenes/montaje/portada montaje.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: rgba(85, 63, 47, 1); 
+            background-blend-mode: multiply;
+        }
+
+
+        /* div
+            padding: 10vh 20vw; */
+        
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -338,6 +397,7 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             background-color: white;
             place-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
         }
         
         /* .gallery-item:hover {
@@ -498,12 +558,11 @@
 /*  */
 
 /* SECCIÓN CONTACTO */
-    
-
         .contact-content {
             display: flex;
             gap: 50px;
             justify-content: center;
+            padding-left: 20vw;
         }
 
         .contact-info {
@@ -513,6 +572,7 @@
         .contact-item {
             display: flex;
             align-items: center;
+/*          padding-left: 10vw; */
             margin-bottom: 30px;
         }
 
@@ -624,12 +684,24 @@
         .about-content{
             flex-direction: column;
         }
-        
+
+        .contact-content {
+            padding-left: 15vw;
+        }
+
+      /*   .contact-item {
+            padding-left: 38%; */
     }
 
-     @media (max-width: 400px) {
+     @media (max-width: 450px) {
         .about-img{
             height: 70vh;
+        }
+
+        
+
+        body{
+            width: 100%;
         }
         
     }
@@ -666,10 +738,11 @@
                 <i class="fas fa-bars"></i>
             </button> -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">Inicio</a></li>
+                <!-- <li><a href="#inicio">Inicio</a></li> -->
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#sobre-mi">About me</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index_ingles_.html"><b>Inglés</b></a></li>
             </ul>
         </div>
     </nav>
@@ -739,7 +812,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h3>Animación 3D</h3>
-                            <p>Los modelos en 3D ponerle huesos y darle movimientos realistas.</p>
+                            <p>A los modelos 3D ponerle huesos y darle movimientos realistas.</p>
                         </div>
                     </a>
                 </div>
@@ -765,7 +838,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h3>Motion Grafics</h3>
-                            <p>Animación de texto para c.</p>
+                            <p>Animación de texto para crear un producto audivisual dinámico.</p>
                         </div>
                     </a>
                 </div>
@@ -786,386 +859,408 @@
         </div>
     </section>
 
-    <div class="titulos" id="modelado">
-        <h2>Modelado</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/D2xzXzqE7bw?si=UYr0quBTmEBl3Zql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <section id="modelado">
+        <div class="titulos">
+            <h2>Modelado</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/D2xzXzqE7bw?si=UYr0quBTmEBl3Zql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iaeRkpR3wCQ?si=hnMKjS8atRZFYSMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iaeRkpR3wCQ?si=hnMKjS8atRZFYSMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%"  src="https://www.youtube.com/embed/fEJNm6nJ8EI?si=GZ0J6M9gVuwR5M6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%"  src="https://www.youtube.com/embed/fEJNm6nJ8EI?si=GZ0J6M9gVuwR5M6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_JrJQ3p1UC8?si=4D7DptyNM4RCiULU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_JrJQ3p1UC8?si=4D7DptyNM4RCiULU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <!-- Elemento 5 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png" data-lightbox="galeria" data-title="">
-                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png">
+                <!-- Elemento 5 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png" data-lightbox="galeria" data-title="">
+                            <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA.png">
+                        </a>
+                </div>
+
+                <!-- Elemento 6 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png" data-lightbox="galeria" data-title="">
+                            <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png">
+                        </a>
+                </div>
+
+                <!-- Elemento 7 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png" data-lightbox="galeria" data-title="">
+                            <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png">
+                        </a>
+                </div>
+
+                <!-- Elemento 8 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mcRSyYLWhVE?si=gYfGpX4L94u4r764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 9 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xC3a-TbZSIU?si=QZOdwobXlvpUwtHP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <a href="imagenes/modelado/hoja de giro arcane.001.jpg" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/hoja de giro arcane.001.jpg">
                     </a>
-            </div>
+                </div>
 
-            <!-- Elemento 6 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png" data-lightbox="galeria" data-title="">
-                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA7.png">
+                <!-- Elemento 10 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png">
                     </a>
-            </div>
+                </div>
 
-            <!-- Elemento 7 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png" data-lightbox="galeria" data-title="">
-                        <img src="imagenes/modelado/MODELADO 3D/PRADO_ANA_COLOR CASA20.png">
+                <!-- Elemento 11 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png">
                     </a>
-            </div>
-
-            <!-- Elemento 8 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mcRSyYLWhVE?si=gYfGpX4L94u4r764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 9 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xC3a-TbZSIU?si=QZOdwobXlvpUwtHP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <a href="imagenes/modelado/hoja de giro arcane.001.jpg" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/modelado/hoja de giro arcane.001.jpg">
-                </a>
-            </div>
-
-            <!-- Elemento 10 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 18.39.08.png">
-                </a>
-            </div>
-
-            <!-- Elemento 11 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/modelado/Captura de pantalla 2025-05-23 a las 1.00.01.png">
-                </a>
-            </div>
-
-            <!-- Elemento 12 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/modelado/habitacionluz.jpeg" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/modelado/habitacionluz.jpeg">
-                </a>
-            </div>
-
-            <!-- Elemento 12 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JKPj04dO5fg?si=hoD4Q8_v28fbME-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
                 </div>
-            </div>
+
+                <!-- Elemento 12 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/modelado/habitacionluz.jpeg" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/modelado/habitacionluz.jpeg">
+                    </a>
+                </div>
+
+                <!-- Elemento 12 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JKPj04dO5fg?si=hoD4Q8_v28fbME-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
-    <div class="titulos" id="animación2D">
-        <h2>Animación 2D</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r-tCE-llrUk?si=K4Z8nIoWNKSHt-tt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="espaciado"></div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bLspniiBLOU?si=d6ORTpkuEM2jJJQd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_o3YN5sqmL0?si=nssolccLcpx7rymu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/H6LsWtX-Ds8?si=Od5-8f_Uxb77STzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 5 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wFLg7jDsYX8?si=NuRt702wcR4WMtEK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 6 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LDQ17f3qrQw?si=kgyjUhbDEEx1Dn2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 7 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LXo5RS-3l1c?si=vjB4CDm7iSJ-JMHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 8 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PVrJfpVnCjs?si=ikeca411WVhUGDRh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 9 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AC3xdslMUag?si=pChKQURbTBYH4hi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-             <!-- Elemento 10 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8m_hRuqUxME?si=V7-hdHjAgU4t6YkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
+    <section id="animación2D">
+        <div class="titulos">
+            <h2>Animación 2D</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r-tCE-llrUk?si=K4Z8nIoWNKSHt-tt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bLspniiBLOU?si=d6ORTpkuEM2jJJQd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_o3YN5sqmL0?si=nssolccLcpx7rymu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/H6LsWtX-Ds8?si=Od5-8f_Uxb77STzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 5 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wFLg7jDsYX8?si=NuRt702wcR4WMtEK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 6 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LDQ17f3qrQw?si=kgyjUhbDEEx1Dn2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 7 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LXo5RS-3l1c?si=vjB4CDm7iSJ-JMHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 8 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PVrJfpVnCjs?si=ikeca411WVhUGDRh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 9 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AC3xdslMUag?si=pChKQURbTBYH4hi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                 <!-- Elemento 10 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8m_hRuqUxME?si=V7-hdHjAgU4t6YkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
-    <div class="titulos" id="animación3D">
-        <h2>Animación 3D</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FcfLKbJX0Fg?si=FP9qeVUrTV7zBx8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="espaciado"></div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/focp4_2BwX8?si=tmecUp7AFFb49IVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OXURBiyBBbU?si=SJL8KNi3QqyoGi3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bhVjVMhW8f0?si=MPDgsA2iWKy1KUja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 5 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bXqSqsq1CV0?si=Bp7v6ag8n8Us-gDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 6 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/o2EkdExzFFE?si=9CB864j-hiPbRhMa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 7 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PHcyDO5DgI0?si=10tEIyFyqGagNODc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         </div>
-
-            <!-- Elemento 7 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Gz4QIgSBrd4?si=xKEWQ3KEJjoNEPJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
-            
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
+    <section id="animación3D">
+        <div class="titulos">
+            <h2>Animación 3D</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FcfLKbJX0Fg?si=FP9qeVUrTV7zBx8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/focp4_2BwX8?si=tmecUp7AFFb49IVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OXURBiyBBbU?si=SJL8KNi3QqyoGi3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bhVjVMhW8f0?si=MPDgsA2iWKy1KUja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 5 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bXqSqsq1CV0?si=Bp7v6ag8n8Us-gDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 6 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/o2EkdExzFFE?si=9CB864j-hiPbRhMa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 7 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PHcyDO5DgI0?si=10tEIyFyqGagNODc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         </div>
+
+                <!-- Elemento 7 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Gz4QIgSBrd4?si=xKEWQ3KEJjoNEPJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </div>
+                
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
-    <div class="titulos" id="dibujos">
-        <h2>Dibujo</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2ylPnyAMVUo?si=cEwRQaGYnH3LyD-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="espaciado"></div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png">
-                </a>
-            </div>
-
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/4-expresiones-1536x1086.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/4-expresiones-1536x1086.png">
-                </a>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/5 poses.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/5 poses.png">
-                </a>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/3 color.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/3 color.png">
-                </a>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/DIBUJOS 3.001.jpeg" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/DIBUJOS 3.001.jpeg">
-                </a>
-            </div>
-
-            <!-- Elemento 5 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/NIÑA ZOMBIE.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/NIÑA ZOMBIE.png">
-                </a>
-            </div>
-
-            <!-- Elemento 6 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg">
-                </a>
-            </div>
-
-            
-            <!-- Elemento 7 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/Ilustración_sin_título.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/Ilustración_sin_título.png">
-                </a>
-            </div>
-
-
-           <!--   Elemento 7 
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_Çisométrico.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_Çisométrico.png">
-                </a>
-            </div>
-
-             Elemento 8
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica frontal.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica frontal.png">
-                </a>
-            </div>
-
-             Elemento 9 
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica oblicua.png" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica oblicua.png">
-                </a>
-            </div>-->
-
-            <!-- Elemento 10 -->
-            <div class="gallery-item" data-category="web">
-                <a href="imagenes/dibujos/BOCETOS.001.jpeg" data-lightbox="galeria" data-title="">
-                    <img src="imagenes/dibujos/BOCETOS.001.jpeg">
-                </a>
-            </div>
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
+    <section id="dibujos">
+        <div class="titulos">
+            <h2>Dibujo</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2ylPnyAMVUo?si=cEwRQaGYnH3LyD-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/PRADO VEGA_BACKGROUND ACUARELA- copia.png">
+                    </a>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/4-expresiones-1536x1086.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/4-expresiones-1536x1086.png">
+                    </a>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/5 poses.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/5 poses.png">
+                    </a>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/3 color.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/3 color.png">
+                    </a>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/DIBUJOS 3.001.jpeg" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/DIBUJOS 3.001.jpeg">
+                    </a>
+                </div>
+
+                <!-- Elemento 5 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/NIÑA ZOMBIE.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/NIÑA ZOMBIE.png">
+                    </a>
+                </div>
+
+                <!-- Elemento 6 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/FONDO CORTO VIDA SENTIDO.001.jpeg">
+                    </a>
+                </div>
+
+                
+                <!-- Elemento 7 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/Ilustración_sin_título.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/Ilustración_sin_título.png">
+                    </a>
+                </div>
+
+
+               <!--   Elemento 7 
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_Çisométrico.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_Çisométrico.png">
+                    </a>
+                </div>
+
+                 Elemento 8
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica frontal.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica frontal.png">
+                    </a>
+                </div>
+
+                 Elemento 9 
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica oblicua.png" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/PRADO_ANA_HABITACIÓN_cónica oblicua.png">
+                    </a>
+                </div>-->
+
+                <!-- Elemento 10 -->
+                <div class="gallery-item" data-category="web">
+                    <a href="imagenes/dibujos/BOCETOS.001.jpeg" data-lightbox="galeria" data-title="">
+                        <img src="imagenes/dibujos/BOCETOS.001.jpeg">
+                    </a>
+                </div>
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
-    <div class="titulos" id="motion">
-        <h2>Motion Grafics</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hVvi7hnJGG4?si=i9DZAfW02N5x581u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="espaciado"></div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QDOL0UOwylQ?si=9RqlMpFSGoSKGKIO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oExUOkdy6OI?si=TJMJ8XQiGO52Xs-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z2bOyLwCtiY?si=Bc-zdnXa62jbRmT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
+    <section id="motion">
+        <div class="titulos">
+            <h2>Motion Grafics</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hVvi7hnJGG4?si=i9DZAfW02N5x581u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QDOL0UOwylQ?si=9RqlMpFSGoSKGKIO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oExUOkdy6OI?si=TJMJ8XQiGO52Xs-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z2bOyLwCtiY?si=Bc-zdnXa62jbRmT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
-    <div class="titulos" id="edición">
-        <h2>Edición</h2>
-    </div>
-    <section class="gallery">
-            <!-- Elemento 1 -->
-            <div class="gallery-item" data-category="web">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/CgRkEAxIceA?si=LuWpp-MelIg3NdU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+    <div class="espaciado"></div>
 
-            <!-- Elemento 2 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1Ghpubd1_BI?si=ca39Svjqj-s69ify" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 3 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vT1n0WYtKC8?si=8tZ5RsEeNYASVwZu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 4 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/C4a0NQpBxD4?si=ApH12I-XRzNOSehY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Elemento 5 -->
-            <div class="gallery-item" data-category="web">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LqT2oHHnrAs?si=fmE5k6Tjv3j0JtgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="modal" id="imageModal">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="modal-content">
-                    <img id="modalImage" src="" alt="Imagen ampliada">
+    <section id="edición">
+        <div class="titulos">
+            <h2>Edición</h2>
+        </div>
+        <div class="gallery">
+                <!-- Elemento 1 -->
+                <div class="gallery-item" data-category="web">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/CgRkEAxIceA?si=LuWpp-MelIg3NdU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <!-- Elemento 2 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1Ghpubd1_BI?si=ca39Svjqj-s69ify" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vT1n0WYtKC8?si=8tZ5RsEeNYASVwZu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/C4a0NQpBxD4?si=ApH12I-XRzNOSehY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Elemento 5 -->
+                <div class="gallery-item" data-category="web">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LqT2oHHnrAs?si=fmE5k6Tjv3j0JtgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="modal" id="imageModal">
+                    <span class="close-modal" id="closeModal">&times;</span>
+                    <div class="modal-content">
+                        <img id="modalImage" src="" alt="Imagen ampliada">
+                    </div>
+                </div>
+        </div>
     </section>
 
 
